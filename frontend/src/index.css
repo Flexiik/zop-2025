@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .calculation-table {
+        @apply table-fixed w-full border-separate border-spacing-0;
+
+        thead {
+            @apply text-sm/6 font-semibold uppercase text-center;
+
+            tr {
+                td {
+                    @apply bg-gray-100 border-t border-gray-300 px-3 py-1;
+                }
+
+                td:first-child {
+                    @apply rounded-tl-xl border-l;
+                }
+
+                td:last-child {
+                    @apply rounded-tr-xl border-r;
+                }
+            }
+        }
+
+        tbody {
+            @apply text-center;
+
+            /* tr:nth-child(2n) {
+                @apply bg-gray-100;
+            }
+
+            tr:nth-child(2n-1) {
+                @apply bg-white;
+            } */
+
+            tr:last-child {
+                td {
+                    @apply border-b border-gray-300;
+                }
+
+                td:first-child {
+                    @apply border-l rounded-bl-xl;
+                }
+
+                td:last-child {
+                    @apply border-r rounded-br-xl;
+                }
+            }
+
+            tr {
+                td:first-child {
+                    @apply border-l border-gray-300;
+                }
+
+                td {
+                    @apply px-3 py-1;
+                }
+
+                td:last-child {
+                    @apply border-r border-gray-300;
+                }
+            }
+        }
+    }
+}
